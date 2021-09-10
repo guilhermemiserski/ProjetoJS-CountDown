@@ -8,6 +8,7 @@ const atualizar = (tempo) => {
     const horas = document.getElementById('horas');
     const dias = document.getElementById('dias');
 
+
     const qtdSegundos = tempo % 60;
     const qtdMinutos = Math.floor((tempo % (60 * 60)) / 60);
     const qtdHoras = Math.floor((tempo % (60 * 60 * 24)) / (60 * 60));
@@ -33,8 +34,8 @@ const contagemRegressiva = (tempo) => {
 }
 
 const tempoRestante = () => {
-    const dataEvento = new Date (document.getElementById('data'));
-    const hoje = Date.now();
+    let dataEvento = new Date ('2021-11-08 20:35:00');
+    console.log(hoje);
     return Math.floor((dataEvento - hoje) / 1000);
 }
 
